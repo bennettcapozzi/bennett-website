@@ -1,11 +1,28 @@
-import Head from 'next/head';
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
+import Link from 'next/link';
 import { Oxygen } from 'next/font/google';
 import { Padauk } from 'next/font/google';
+import { Gelasio } from 'next/font/google';
 
-const oxygen = Oxygen({variable: '--font-oxygen', weight: "300", subsets: ['latin']});
-const padauk = Padauk({variable: '--font-padauk', weight: "400", subsets: ['latin']});
+const oxygen = Oxygen (
+{
+  variable: '--font-oxygen', 
+  weight: "300", 
+  subsets: ['latin']
+});
+const padauk = Padauk (
+{
+  variable: '--font-padauk', 
+  weight: "400", 
+  subsets: ['latin']
+});
+const gelasio = Gelasio (
+{
+  variable: '--font-gelasio',
+  weight: "400",
+  style: ['normal', 'italic'],
+  subsets: ['latin']
+});
 
 export const siteTitle = 'Bennett Capozzi';
 
@@ -22,34 +39,44 @@ const items = [
   },
   {
       title: "City Speak",
-      subtitle: "(Substack)",
-      url: "https://bennettcapozzi.substack.com/",
+      subtitle: "(Urban Planning Writing on Substack)",
+      url: "https://bennettcapozzi.substack.com",
+      target: "_blank",
   },
   {
       title: "Dedicated Co",
       subtitle: "(Web Design & Development Consulting)",
       url: "https://www.dedicated.codes",
+      target: "_blank",
   },
+  {
+    title: "LinkedIn",
+    subtitle: "(If You'd Like to Connect)",
+    url: "https://www.linkedin.com/in/bennett-capozzi-159147112/",
+    target: "_blank",
+},
 ]
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className={styles.flex}>
-      <div>
-      <div className={`${padauk.className} ${styles.siteTitle}`}>{siteTitle}</div>
-      <div>
+      <div className={styles.sidebar}>
+      <div className={`${gelasio.className} ${styles.siteTitle}`}><Link href="#">{siteTitle}</Link></div>
+      <div className={styles.linkList}>
       {items.map((item) => (
-        <Link href = {item.url}>
+        <div className={styles.link}>
+        <Link href = {item.url} target={item.target}>
           <span>{item.title} </span>
-          <span>{item.subtitle}</span>
+          <span className={styles.linkSubtitle}>{item.subtitle}</span>
           <br/>
         </Link>
+        </div>
       ))}  
       </div>
       </div>
-        <main>
+        <div className={styles.body}>
           {children}
-        </main>
+        </div>
     </div>
   )
 }
