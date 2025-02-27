@@ -1,7 +1,9 @@
 html,
 body {
   padding: 0em;
-  margin: 1em;
+  margin-right: 1em;
+  margin-left: 1em;
+  margin-bottom: 1em;
   font-family:
     Inter,
     -apple-system,
