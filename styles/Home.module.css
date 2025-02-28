@@ -32,7 +32,7 @@
   text-decoration: underline;
 }
 
-.link:hover {
+.link:hover span {
   text-decoration: underline;
   text-underline-offset: 5px;
 }
@@ -101,11 +101,6 @@
     padding-left: 2em;
   }
   
-  .link:hover {
-    text-decoration: underline;
-    text-underline-offset: 5px;
-  }
-  
   .linkSubtitle {
     display: none;
   }
@@ -149,6 +144,11 @@
   .linkList {
     padding-left: .25em;
     flex-direction: column;
+  }
+
+  .link {
+    text-decoration: none;
+    line-height: 1.5em;
   }
 
   .link:not(:first-child) {

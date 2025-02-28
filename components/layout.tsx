@@ -27,16 +27,16 @@ const gelasio = Gelasio (
 export const siteTitle = 'Bennett Capozzi';
 
 const items = [
-  {
-      title: "About Me",
-      subtitle: "(Professional and Research Experience)",
-      url: "#",
-  },
-  {
-      title: "Masters Thesis",
-      subtitle: "(Evolution of a Useful Place: The Gas Station in America)",
-      url: "#",
-  },
+  // {
+  //     title: "About Me",
+  //     subtitle: "(Professional and Research Experience)",
+  //     url: "#",
+  // },
+  // {
+  //     title: "Masters Thesis",
+  //     subtitle: "(Evolution of a Useful Place: The Gas Station in America)",
+  //     url: "#",
+  // },
   {
       title: "City Speak",
       subtitle: "(Urban Planning Writing on Substack)",
