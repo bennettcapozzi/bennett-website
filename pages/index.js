@@ -8,16 +8,15 @@ export default function Home() {
     <div className={styles.imageContainer}>
     <Image
             priority
-            src="/DSC01477.jpg"
+            src="/577.jpg"
             className={styles.image}
             height={828}
             width={1110}
             alt=""
           />
-
-<Image
+    <Image
             priority
-            src="/DSC01935_2.jpeg"
+            src="/524.jpg"
             className={styles.image}
             height={828}
             width={1110}
